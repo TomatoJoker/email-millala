@@ -1,26 +1,270 @@
-{#include style#}
+{# include style #}
 {% set title = 'Home' %}
-{% set stylesPage = ['home'] %}
-{% set stylesVendor = ['your-name-vendor-style-name'] %} {#include style vendor#}
-{% set scripts = ['home'] %}
-{% set scriptsVendor = ['your-name-vendor-script-name'] %} {#include style vendor#}
-
-{% import "components/card.njk" as macros %}
-{% set card = macros.card %}
 {% extends 'layouts/layout.njk' %}
 
+{% block style %}
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+        table {
+            border-spacing: 0;
+            mso-cellspacing: 0;
+            mso-padding-alt: 0;
+        }
+
+        td {
+            padding: 0;
+        }
+
+        #outlook a {
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #e8fbfa;
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: 599.98px) {
+            .full-width {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .mobile-col-padding {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+
+            .mobile-col-padding img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        @media screen and (max-width: 399.98px) {
+            br {
+                display: none !important;
+            }
+
+            /*.two-columns .column {*/
+            /*    width: 100% !important;*/
+            /*    max-width: 100% !important;*/
+            /*}*/
+            .two-columns .column img {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .three-columns .column {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .three-columns .column img {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .four-columns .column {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .four-columns .column img {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+        }
+
+
+        /* :root {
+          color-scheme: light dark;
+          supported-color-schemes: light dark;
+        } */
+
+        /* @media (prefers-color-scheme: dark) {
+          table,
+          td {
+            background-color: #06080B !important;
+          }
+
+          h1,
+          h2,
+          p {
+            color: #ffffff !important;
+          }
+        } */
+
+    </style>
+
+    <!--[if (gte mso 9) | (IE)]>
+    <style type="text/css">
+        table a {
+            color: #FFFFFF;
+        }
+
+        a {
+            color: rgba(18, 14, 204, 1);
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+    </style>
+    <![endif]-->
+
+    <!--[if (gte mso 9) | (IE)]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+{% endblock %}
+
 {% block content %}
-    <div class="wrapper">
-        {% include 'components/header.njk' %}
-        <main class="main">
-            <div class="container">
-                {% for i in range(1, 10) %}
-                    {% call card('test') %}
-                        {{ 1 }} Start
-                    {% endcall %}
-                {% endfor %}
+    <body style="Margin:0; padding:0;min-width:100%;background-color: #dde0e1; font-family: Geneva, Verdana, sans-serif;">
+
+    <center style="background: #FFFFFF; padding-top: 20px; padding-bottom: 20px;">
+
+        <div style="max-width: 600px;box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+            <div style="font-size:0;line-height: 1px;mso-line-height-rule:exactly;display: none;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">
+                Предехер
             </div>
-        </main>
-        {% include 'components/footer.njk' %}
-    </div>
+        </div>
+
+        <!--[if (gte mso 9) | (IE)]>
+        <table width="600" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
+            <tr>
+                <td>
+        <![endif]-->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation"
+               style="background-color: #fafdfe;color: #565656;Margin:0;padding:0;max-width: 600px;width:100%;font-family: 'Inter', Arial, sans-serif, Helvetica;">
+
+            <!-- Top section -->
+            <tr>
+                <td>
+                    <table border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                            <td align="center" style="padding: 0 0 32px 0;">
+                                <a href="https://lorem.com/" style="line-height: 0;" target="_blank" rel="nofollow">
+                                    <img src="https://kept.com.ua/image/5jxi/logo.png" alt="Logo" width="150"
+                                         height="30"
+                                         border="0"/>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding: 0 100px 24px 100px" class="mobile-col-padding">
+                                <h1 style="margin: 0;font-family: Geneva, Verdana, sans-serif; font-weight: 400; font-size: 24px; line-height: 1.21; color: #000000">
+                                    Lorem ipsum dolor sit amet dolor viverra</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding: 0 120px 12px 120px" class="mobile-col-padding">
+                                <p style="margin: 0; font-family: Geneva, Verdana, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.57; color: rgba(0, 0, 0, 0.7);">
+                                    Fermentum ipsum justo amet, pellentesque natoque felis. Nisl, enim purus ultrices
+                                    molestie nunc odio.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- end Top section -->
+
+            <!-- two columns section -->
+            {% set list = [
+                'https://kept.com.ua/image/5jxk/Rectangle_5.png',
+                'https://kept.com.ua/image/5jxl/Rectangle_5(1).png',
+                'https://kept.com.ua/image/5jxm/Rectangle_5(2).png'
+            ] %}
+            {% for image in list %}
+                {% include 'components/two-columns.njk' %}
+            {% endfor %}
+            <!-- two columns section -->
+
+            <!-- section with text and btn -->
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                        <tr>
+                            <td style="padding: 12px 39px 20px 39px">
+                                <p style="margin: 0; font-size: 14px; font-weight: 400; line-height: 1.57">Lorem ipsum
+                                    dolor sit amet, consectetur adipiscing elit. Sit nisl, viverra potenti sem vel nam
+                                    eros neque. Nulla viverra sit feugiat volutpat in eros diam quam sed.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px 39px 24px 39px">
+                                <p style="margin: 0; font-size: 14px; font-weight: 400; line-height: 1.57">Fermentum
+                                    ipsum justo amet, pellentesque natoque felis. Nisl, enim purus ultrices molestie
+                                    nunc odio. Non pharetra quam morbi elementum porttitor neque id ornare turpis. Fusce
+                                    nunc dui arcu placerat est. Integer malesuada id eu viverra morbi in. Vitae quam
+                                    senectus nibh cursus.</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding: 0px 100px 0px 100px;">
+                                <table>
+                                    <tr>
+                                        <td align="center" style="border-radius: 50px; background: rgba(2, 0, 114, 1);">
+                                            <a style="font-family: Geneva, Verdana, sans-serif; font-weight: 700; border: 1px solid rgba(2, 0, 114, 1); border-radius: 50px; font-size: 14px; line-height: 1.57;; display: inline-block; padding: 10px 40px 10px 40px; color: #FFFFFF; background: rgba(2, 0, 114, 1);"
+                                               href="https://lorem.com/">Dolor</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- end section with text and btn -->
+
+            <!-- section with image and text -->
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="padding: 24px 39px 24px 39px;" class="mobile-col-padding">
+                                <img src="https://kept.com.ua/image/5jxn/Rectangle_1.png" border="0" width="523"
+                                     height="300" alt=""/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0 39px 20px 39px" class="mobile-col-padding">
+                                <p style="margin: 0;font-family: Geneva, Verdana, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.57; color: #000000;">
+                                    Morbi potenti donec ornare amet eu iaculis neque tristique vitae. Aliquam euismod risus
+                                    euismod neque, feugiat ut. Amet, <a style="color: rgba(18, 14, 204, 1); text-decoration: underline" href="https://lorem.com/">aliquam vulputate</a> lectus ut commodo. Augue nisi, etiam
+                                    tortor sapien, sed parturient. Enim condimentum egestas rhoncus tincidunt senectus
+                                    phasellus tempor at non. Ultricies scelerisque felis dignissim proin quis amet diam.
+                                    Maecenas pulvinar quisque viverra magnis. A condimentum augue sed odio a. Non rhoncus ut
+                                    urna nulla cursus dui dui. Ullamcorper <a style="color: rgba(18, 14, 204, 1); text-decoration: underline" href="https://lorem.com/">mollis eget at nulla</a>.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px 39px 0 39px" class="mobile-col-padding">
+                                 <p style="margin: 0; font-family: Geneva, Verdana, sans-serif; font-size: 14px; font-weight: 400; line-height: 1.57; color: #000000;">
+                                     Cheers<br/>
+                                     The Millala Team
+                                 </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- end section width image and text -->
+
+        </table>
+        <!--[if (gte mso 9) | (IE)]>
+        </td>
+        </tr>
+        </table>
+        <![endif]-->
+    </center>
+
+    </body>
 {% endblock %}
