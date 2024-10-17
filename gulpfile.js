@@ -232,12 +232,12 @@ exports.watch = watch;
 exports.default = gulp.series(
     gulp.parallel(
         html,
-        style,
-        styleMin,
-        js,
+        // style,
+        // styleMin,
+        // js,
         // styleLibs,
         // jsLibs,
-        copy,
+        // copy,
     ),
     gulp.parallel(
         watch,
